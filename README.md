@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+📘 AI Career Coach – Documentation
+📌 Overview
 
-## Getting Started
+AI Career Coach is a Next.js-based full-stack web application that helps job seekers improve their career growth through AI-powered features like:
 
-First, run the development server:
+Resume & Cover Letter generation
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Industry insights
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Career quizzes & assessments
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Personalized career guidance
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The app leverages Google’s Gemini AI, Prisma ORM for database management, Inngest for background jobs, and Shadcn UI for a modern user interface.
 
-## Learn More
+🏗️ Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+Frontend & Backend Framework: Next.js 14+ (App Router)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Database ORM: Prisma
+ (with PostgreSQL/MySQL/SQLite)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+UI Library: Shadcn UI
+ + Tailwind CSS
 
-## Deploy on Vercel
+AI Integration: Google Gemini API
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Background Jobs & Events: Inngest
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Authentication: Clerk/Auth.js (or custom JWT-based auth)
+
+Deployment: Vercel (frontend) + Railway/Supabase (database)
+
+🔑 Core Features
+1. AI Resume Builder
+
+Upload existing resume (PDF/Docx) or create from scratch.
+
+Gemini AI suggests improvements, ATS optimization, and job-specific tailoring.
+
+Option to export as PDF/Word.
+
+2. AI Cover Letter Generator
+
+User inputs job description → Gemini AI generates a personalized cover letter.
+
+Supports multiple tones (formal, concise, creative).
+
+Editable rich-text editor before final export.
+
+3. Industry Insights
+
+Gemini AI provides insights about:
+
+In-demand skills for specific industries.
+
+Salary benchmarks based on job title & location.
+
+Trending technologies in the field.
+
+4. Career Quiz & Personality Tests
+
+Quiz engine built with Prisma + Inngest to store & evaluate results.
+
+Gemini AI provides personalized career suggestions based on responses.
+
+Tracks user progress & insights over time.
+
+5. User Dashboard
+
+Profile setup with career goals, skills, preferred industries.
+
+Track saved resumes, cover letters, insights, and quiz results.
+
+Notifications for new insights/jobs via Inngest background tasks.
